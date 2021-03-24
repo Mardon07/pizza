@@ -1,0 +1,159 @@
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup.is-active{
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+}
+.popup__wrapper{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.popup__inner{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    padding: 50px;
+}
+
+
+
+.popup__content{
+    
+    background: #fff;
+    color: #000;
+    padding: 70px 20px;
+    max-width: 730px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+    
+}
+
+
+
+.popup__content--fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
+.popup__content--centered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.btn-popup__close{
+    top: 20px;
+    right: 35px;
+    position: absolute;
+}
+.popup__title{
+    margin-bottom: 20px;
+}
+.popup__subtitle{
+    max-width: 320px;
+    text-align: center;
+    margin: 0 auto 50px;
+    font-size: 24px;
+}
+
+.order{
+    max-width: 310px;
+    margin: 0 auto;
+}
+.order__img{
+    width: 186px;
+    height: auto;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.order__title{
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Montserrat';
+}
+
+.order__size{
+    margin: 0 0 30px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    color: #a2a2a2;
+}
+
+.form__input{
+    display: block;
+    background: #f7f7f7;
+    width: 100%;
+    padding: 22px 28px;
+    margin: 0 auto 8px;
+    border-radius: 32px;
+    outline: none;
+    border: 2px solid transparent;
+}
+.form__input:focus{
+    border-color: #ffa650;
+}
+
+.order__btn{
+    width: 100%;
+    margin-top: 0;
+    box-shadow: none;
+    background: #ffa650;
+    padding: 22px 28px;
+    border-radius: 50px;
+}
+.order__btn:hover{
+    background: rgb(228, 104, 46);
+}
+
+.popup__subtitle--thanks{
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+
+.problem-tel{
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+}
+@media(max-width:767px){
+    .popup__content{
+    max-width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding-top: 100px;
+    }
+    .popup__inner{
+        padding: 0;
+    }
+    .popup__subtitle{
+        max-width: 260px;
+        
+        font-size: 18px;
+    }
+
+    .popup__subtitle--thanks{
+        margin: 0 auto;
+        max-width: 100%;
+       
+    }
+}
